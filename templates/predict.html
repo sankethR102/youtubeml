@@ -14,6 +14,9 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+        small {
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
@@ -31,8 +34,14 @@
             <h3 class="text-center text-primary mb-4">🎯 Predict Estimated Views</h3>
             <form method="POST">
                 <div class="mb-3">
-                    <label for="desc" class="form-label">Enter Video Description:</label>
-                    <textarea name="description" class="form-control" id="desc" rows="5" required></textarea>
+                    <label for="title" class="form-label">Video Title (optional):</label>
+                    <input type="text" name="title" class="form-control" id="title" placeholder="Enter the video title">
+                    <small class="form-text">Providing the title helps improve prediction accuracy.</small>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Video Description (required):</label>
+                    <textarea name="description" class="form-control" id="desc" rows="5" required placeholder="Paste the full YouTube video description here"></textarea>
+                    <small class="form-text">This is the text shown below the video on YouTube.</small>
                 </div>
                 <div class="d-grid">
                     <button class="btn btn-primary">Predict Views</button>
